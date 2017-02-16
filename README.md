@@ -1,10 +1,12 @@
 # Microsoft SQL server in Docker
-Docker container configuration for Microsoft SQL server on Linux.
+Some helpful scripts and configurations to easily get a Microsoft SQL server
+instance running in a docker container on Linux.
 
-This project uses docker-compose as configuration manager.
+This project uses Microsoft's docker image for SQL server and uses
+docker-compose to easily manage container configurations.
 
 ## Requirements
-* Linux operating system as host
+* Linux operating system
 * Docker
 * Docker composer
 
