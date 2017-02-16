@@ -1,12 +1,9 @@
-version: 2
-
-services:
-    mssql:
-        image: 'microsoft/mssql-server-linux'
-        ports:
-            - '1433:1433'
-        environment:
-            - ACCEPT_EULA=Y
-            - SA_PASSWORD=test1234
-        volumes:
-            - './drive:/mnt/drive'
+mssql:
+    image: 'microsoft/mssql-server-linux'
+    ports:
+        - '1433:1433'
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=Test1234!
+    volumes:
+        - './drive:/mnt/drive'
