@@ -11,7 +11,7 @@ docker-compose to easily manage container configurations.
 * Docker composer
 
 ## Usage
-* Clone repository (`git clone https://github.com/timvisee/docker-mssql.git; cd docker-mssql`)
+* Clone repository (`git clone https://github.com/timvisee/docker-compose-mssql.git; cd docker-compose-mssql`)
 * Configure password in `docker-compose.yml` file.
 * Start the container (`./start`)
 
