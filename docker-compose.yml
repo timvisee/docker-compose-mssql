@@ -4,11 +4,11 @@ services:
     portainer:
         mssql:
             image: 'mcr.microsoft.com/mssql/server'
-            container_name: 'mssql-server'
+            container_name: '${MSSQL_CONTAINER_NAME}'
             ports:
-                - '1433:1433'
+                - '${MSSQL_PORT}:1433'
             environment:
-                - ACCEPT_EULA=Y
-                - SA_PASSWORD=Secret1234
+                - ACCEPT_EULA=${ACCEPT_EULA}
+                - SA_PASSWORD=${SA_PASSWORD}
             volumes:
                 - './drive:/var/opt/mssql'
