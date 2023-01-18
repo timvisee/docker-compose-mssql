@@ -17,7 +17,7 @@ git clone https://github.com/tanhongit/docker-compose-mssql-server.git
 cd docker-compose-mssql-server
 ```
 
-* Configure password in `docker-compose.yml` file.
+* Configure password in `.env` file.
 * Start the container:
 ```bash
 ./start
