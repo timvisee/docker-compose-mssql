@@ -16,7 +16,7 @@ docker-compose to easily manage container configurations.
 git clone https://github.com/tanhongit/docker-compose-mssql-server.git
 cd docker-compose-mssql-server
 ```
-
+* Copy `.env.example` to `.env` and edit the file to your needs.
 * Configure password in `.env` file.
 * Start the container:
 ```bash
