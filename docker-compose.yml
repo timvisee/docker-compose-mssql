@@ -10,5 +10,3 @@ services:
         environment:
             - ACCEPT_EULA=${ACCEPT_EULA}
             - SA_PASSWORD=${SA_PASSWORD}
-        volumes:
-            - './drive:/var/opt/mssql'
