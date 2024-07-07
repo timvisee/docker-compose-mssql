@@ -1,10 +1,11 @@
 services:
     mssql:
         image: 'mcr.microsoft.com/mssql/server'
-        container_name: '${MSSQL_CONTAINER_NAME}'
+        container_name: '${MSSQL_CONTAINER_NAME:-mssql}'
+        platform: ${MSSQL_PLATFORM:-linux/x86_64}
         ports:
-            - '${MSSQL_PORT}:1433'
+            - '${MSSQL_PORT:-1433}:1433'
         restart: always
         environment:
-            - ACCEPT_EULA=${ACCEPT_EULA}
+            - ACCEPT_EULA=${ACCEPT_EULA:-Y}
             - SA_PASSWORD=${SA_PASSWORD}
