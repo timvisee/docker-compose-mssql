@@ -8,7 +8,7 @@ docker-compose to easily manage container configurations.
 ## Requirements
 * Linux operating system
 * Docker
-* Docker composer
+* Docker compose
 
 ## Usage
 * Clone repository 
@@ -29,7 +29,16 @@ To stop the container, use the `./stop` script.
 
 Log in on the database with your credentials:
 * User: `sa`
-* Password: `root` (default)
+* Password: `Password123(!)Strong` (default)
+
+> [!NOTE]
+> The password can be changed in the `.env` file.
+
+```dotenv
+# .env file
+
+SA_PASSWORD=Password123(!)Strong
+```
 
 ## License
 This project is released under the GNU GPL-3.0 license. Check out the [LICENSE](LICENSE) file for more information.
