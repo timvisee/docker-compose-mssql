@@ -8,18 +8,49 @@ docker-compose to easily manage container configurations.
 ## Requirements
 * Linux operating system
 * Docker
-* Docker composer
+* Docker compose
 
 ## Usage
-* Clone repository (`git clone https://github.com/timvisee/docker-compose-mssql.git; cd docker-compose-mssql`)
-* Configure password in `docker-compose.yml` file.
-* Start the container (`./start`)
 
-To stop the container, use the `./stop` script.
+### Clone repository
 
-Log in on the database with your credentials:
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/timvisee/docker-compose-mssql.git
+cd docker-compose-mssql
+```
+
+### Start the container
+* Copy `.env.example` to `.env` and edit the file to your needs.
+
+```bash
+cp .env.example .env
+```
+
+* Configure password in `.env` file.
+
+```dotenv
+# .env file
+
+SA_PASSWORD=Password123(!)Strong
+```
+
+* Start the container:
+
+```bash
+./start
+```
+
+> [!NOTE]
+> To stop the container, use the `./stop` script.
+> ```bash
+> ./stop
+> ```
+
+### Log in on the database with your credentials
 * User: `sa`
-* Password: `Secret1234` (default)
+* Password: `Password123(!)Strong` (use the password you set in the `.env` file)
 
 ## License
 This project is released under the GNU GPL-3.0 license. Check out the [LICENSE](LICENSE) file for more information.

@@ -1,9 +1,13 @@
-mssql:
-    image: 'mcr.microsoft.com/mssql/server'
-    ports:
-        - '1433:1433'
-    environment:
-        - ACCEPT_EULA=Y
-        - SA_PASSWORD=Secret1234
-    volumes:
-        - './drive:/var/opt/mssql'
+services:
+    mssql:
+        image: 'mcr.microsoft.com/mssql/server'
+        container_name: '${MSSQL_CONTAINER_NAME:-mssql}'
+        platform: ${MSSQL_PLATFORM:-linux/x86_64}
+        ports:
+            - '${MSSQL_PORT:-1433}:1433'
+        restart: always
+        environment:
+            - ACCEPT_EULA=${ACCEPT_EULA:-Y}
+            - SA_PASSWORD=${SA_PASSWORD}
+        volumes:
+            - './drive:/var/opt/mssql'
